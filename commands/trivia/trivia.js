@@ -6,7 +6,6 @@ const EnmapLevel = require('enmap-level'); // imports
 
 const tableSource = new EnmapLevel({name: 'points'});
 const PointSystem = new Enmap({provider: tableSource});  // creates table for point system
-PointSystem.set('test2', 1);
 
 var contents = fs.readFileSync(__dirname + '\\pokedex.json');
 var objsArray = []
@@ -19,21 +18,21 @@ class pokeTrivia extends commando.Command {
             name:'pokemon',
             group: 'trivia',
             memberName: 'pokemon', 
-            description: 'who\'s that pokemon'
-        });
-    }
+            description: 'who\'s that pokemon'  // creates command info/desc
+        }); 
+    }                                               
 
-    async run(message, args) {
+    async run(message, args) { //what the bot runs when command is called
         var pokeNum = Math.floor(Math.random() * 721) + 1;
         var pokeName = objsArray[pokeNum - 1].ename;
 
-        if (args.includes('score')) {
+        if (args.includes('score')) { 
             if (args.includes('@')) {
-                var id = args.substring(8, args.length - 1);
+                var id = args.substring(8, args.length - 1);    //if someone is mentioned, that score is referenced
                 console.log(id);
                 message.channel.send(args.substring(6, args.length) + '\'s score is ' + PointSystem.get(id));
             }
-            else {
+            else { //otherwise, the author's score will be referenced
                 message.channel.send(message.author.username + '\'s score is ' + PointSystem.get(message.author.id) + ' points');
             }
         }
@@ -43,7 +42,7 @@ class pokeTrivia extends commando.Command {
                 PointSystem.set(message.author.id, 0);
             }
     
-            function padNum(number) {
+            function padNum(number) {  // adds 00 to conform with the image folder/names
                 if (number < 10) return '00' + number;
     
                 else if (number >= 10 && number < 100) return '0' + number;

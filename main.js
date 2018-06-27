@@ -1,16 +1,16 @@
 const commando = require('discord.js-commando');
 const fs = require('fs');
-const bot = new commando.Client();
+const bot = new commando.Client(); // imports
 
 var auth = fs.readFileSync(__dirname + '\\auth.json');
 var objsArray = []
-objsArray = JSON.parse(auth);
+objsArray = JSON.parse(auth); // loads in auth token
 
 
 bot.registry.registerGroup('random', 'Random');
 bot.registry.registerGroup('trivia', 'Trivia');
 bot.registry.registerDefaults();
-bot.registry.registerCommandsIn(__dirname + '\\commands'); 
+bot.registry.registerCommandsIn(__dirname + '\\commands');  // registers commands to the bot and its groups
 
 const swear_list = ['fuck', 'ass', 'shit', 'hell', 'bollocks', 'fuckass', 'assshit', 'fuckhell', 'shithell', 'assfuck',
                         'motherfucker', 'goddamn', 'damn', 'arse', 'asshole', 'fck'];
