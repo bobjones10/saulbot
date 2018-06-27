@@ -18,7 +18,6 @@ class GambleCommand extends commando.Command {
         }
         else {
             message.reply(": (");
-            message.channel.send('hello');
         }  
     }
 }
