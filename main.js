@@ -1,6 +1,10 @@
 const commando = require('discord.js-commando');
+const fs = require('fs');
 const bot = new commando.Client();
 
+var auth = fs.readFileSync(__dirname + '\\auth.json');
+var objsArray = []
+objsArray = JSON.parse(auth);
 
 bot.registry.registerGroup('random', 'Random');
 bot.registry.registerGroup('trivia', 'Trivia');
@@ -58,5 +62,5 @@ bot.on('message', message => {
     */
 })
 
-bot.login('NDYwOTE0MzE2MTU4MzA0Mjc4.DhP6_g.9PIMEJiUEqkIbRvc5c-hnjXFlqI');
+bot.login(objsArray.token);
 
