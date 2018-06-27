@@ -21,7 +21,12 @@ bot.on('message', message => {
     var message_words = message.content.split(' ');
 
     if (message.mentions.members.keyArray().includes('141255836914679808')) {
-        message.channel.send('do not speak to saul unless you\'re spoken to');
+        if (message.author.id != 460914316158304278) {
+            message.channel.send('do not speak to saul unless you\'re spoken to');
+        }
+        else {
+            
+        }
     }
 
     var swear_indicator = 0;

@@ -21,3 +21,5 @@ class GambleCommand extends commando.Command {
         }  
     }
 }
+
+module.exports = GambleCommand;
