@@ -19,6 +19,10 @@ class TestingCommands extends commando.Command {
         else {
             message.channel.send('args not present');
         }
+
+	function test(mess) {
+		message.channel.send('test completed');
+	}
     }
 }
 
