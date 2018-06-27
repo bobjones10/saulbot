@@ -1,4 +1,4 @@
-const commando = require('discord.js-command');
+const commando = require('discord.js-commando');
 
 class GambleCommand extends commando.Command {
     constructor (client) {
