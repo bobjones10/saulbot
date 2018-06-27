@@ -1,5 +1,5 @@
-2018/06/27-14:10:10.529 47ac Recovering log #33
-2018/06/27-14:10:10.529 47ac Level-0 table #35: started
-2018/06/27-14:10:10.537 47ac Level-0 table #35: 221 bytes OK
-2018/06/27-14:10:10.544 47ac Delete type=0 #33
-2018/06/27-14:10:10.544 47ac Delete type=3 #30
+2018/06/27-14:17:39.241 cc8 Recovering log #36
+2018/06/27-14:17:39.241 cc8 Level-0 table #38: started
+2018/06/27-14:17:39.254 cc8 Level-0 table #38: 221 bytes OK
+2018/06/27-14:17:39.266 cc8 Delete type=0 #36
+2018/06/27-14:17:39.267 cc8 Delete type=3 #34

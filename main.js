@@ -13,7 +13,7 @@ bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + '\\commands'); 
 
 const swear_list = ['fuck', 'ass', 'shit', 'hell', 'bollocks', 'fuckass', 'assshit', 'fuckhell', 'shithell', 'assfuck',
-                        'motherfucker', 'goddamn', 'damn', 'arse', 'asshole'];
+                        'motherfucker', 'goddamn', 'damn', 'arse', 'asshole', 'fck'];
 
 bot.on('ready', function() {
     bot.user.setUsername("saulbot");
