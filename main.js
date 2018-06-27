@@ -6,6 +6,7 @@ var auth = fs.readFileSync(__dirname + '\\auth.json');
 var objsArray = []
 objsArray = JSON.parse(auth);
 
+
 bot.registry.registerGroup('random', 'Random');
 bot.registry.registerGroup('trivia', 'Trivia');
 bot.registry.registerDefaults();
@@ -43,9 +44,10 @@ bot.on('message', message => {
     }
     
     if (swear_indicator != 0) {
+        var imgNum = Math.floor(Math.random() * 4) + 1;
         message.channel.send({
             files: [{
-                attachment: __dirname + '\\profanity.jpg',
+                attachment: __dirname + '\\swear_images\\' + imgNum + '.jpg',
                 name: 'pls_dont_swear.jpg'
             }]
         })
